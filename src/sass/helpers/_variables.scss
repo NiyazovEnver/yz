@@ -1,0 +1,98 @@
+// breakpoints
+$phone: 300;
+$tablet-xs: 375;
+$tablet-sm: 540;
+$tablet: 760;
+$tablet-lg:991;
+$desktop: 1023;
+$desktop-xs:1200;
+$desktop-s:1280;
+$desktop-md: 1365;
+$desktop-lg: 1919;
+$desktop-retina: 2550;
+
+$title-text: 'Gilroy',
+sans-serif;
+$main-text: 'Frank',
+sans-serif;
+
+// colors
+$red-color: #d21e34;
+$white-color: #ffffff;
+
+$black: #0C0A17;
+$white: #FFFFFF;
+
+$gray-700: #1C1B25;
+$gray-100: #F8F8F8;
+
+$gray-600: #585962;
+$gray-200: #E9E9E9;
+
+$gray-500: #7C7B85;
+$gray-300: #D3D3D3;
+
+
+
+
+:root {
+    --bg-color: #{$black};
+    --same-color:#{$gray-500};
+    --text-color: #{$white};
+    --gray-color: #{$gray-600};
+    --light-gray-color: #{$gray-500};
+    --dark-gray-color: #{$gray-700};
+
+    --footer-color:#{$gray-500};
+    --gray-700: #{$gray-700};
+    --substrate: #000000b3;
+    --stroke: unset;
+
+    li::selection,
+    a::selection,
+    p::selection,
+    span::selection,
+    strong::selection {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+
+    // --contacts-map: url("./../../img/map-black.jpg");
+    --contacts-map: url("../../src/img/map-black.jpg");
+}
+
+html.theme--white {
+    --bg-color: #{$white};
+    --same-color:#{$gray-500};
+
+    --text-color: #{$gray-700};
+    --gray-color: #{$gray-200};
+    --light-gray-color:#{$gray-300};
+    --dark-gray-color:#{$gray-300};
+
+    --gray-700: #{$gray-100};
+    --footer-color: #{$gray-300};
+
+    --stroke: 3px var(--bg-color);
+    --contacts-map: url("../../src/img/map-white.jpg");
+
+    // *::selection {
+    // 	background-color: #000 !important;
+    // }
+}
+
+// html.theme--white .projects {
+//     --text-color: #ffffff;
+//     --gray-color: #434453;
+//     --light-gray-color: #d3cffa;
+
+//     --footer-color: #434453;
+//     --stroke: 0px;
+// }
+
+// @include rmin($desktop) {
+//     html.theme--white .projects {
+//         --stroke: 3px var(--bg-color) !important;
+//         --text-color: #000000;
+//     }
+// }

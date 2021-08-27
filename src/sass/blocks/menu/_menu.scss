@@ -1,0 +1,249 @@
+.site-menu {
+
+    // navigation
+    &__nav {
+        width: 60px;
+    }
+
+    // &__nav-toggler {
+    // 	position: relative;
+    // 	display: block;
+
+    // 	width: 47px;
+    // 	height: 40px;
+    // 	padding: 15px 10px;
+    // 	margin-left: auto;
+
+    // 	z-index: 2;
+
+    // 	color: var(--text-color);
+    // 	background-color: transparent;
+    // }
+
+    // toggle button
+    &__nav-toggler {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+
+        display: flex;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+
+        font-size: 24px;
+        line-height: 24px;
+        text-transform: uppercase;
+
+        background-color: transparent;
+        touch-action: manipulation;
+
+        .shape {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+
+            width: 30px;
+            height: 18px;
+
+            color: var(--text-color);
+            transform: translateY(-50%);
+        }
+
+        .line {
+            width: 100%;
+            height: 3px;
+            margin: 0 0 6px;
+
+            background-color: currentColor;
+            transform-origin: right center;
+            transform: scaleX(0);
+            will-change: transform;
+        }
+
+        .line:nth-child(2) {
+            max-width: 55%;
+            margin-left: auto;
+        }
+
+        .close {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            width: 35px;
+            height: 35px;
+
+            // color: var(--gray-color);
+            color: $red-color;
+
+            transform: translate(-50%, -50%) rotate(0) scale(0);
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+
+                background: currentColor;
+            }
+
+            &::before {
+                width: 3px;
+                height: 25px;
+                margin: -12px 0 0 -1px;
+            }
+
+            &::after {
+                width: 25px;
+                height: 3px;
+                margin: -1px 0 0 -12px;
+            }
+        }
+    }
+
+    // navigation menu
+    &__wrapper {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+
+        // background-color: orangered;
+        // transform: translateX(-100%);
+        pointer-events: none;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100vw;
+        height: 100vh;
+
+        background-color: var(--bg-color);
+
+        transform: scaleX(0);
+        transform-origin: left center;
+        will-change: transform;
+    }
+
+    &__list {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        // height: calc(100vh - 109px);
+        height: 100vh;
+        padding-left: 50px;
+    }
+
+    &__item {
+        font-size: 32px;
+        color: var(--same-color);
+
+        &:not(:last-child) {
+            margin-bottom: 35px;
+        }
+
+        opacity: 0;
+        will-change: opacity;
+        visibility: hidden;
+    }
+
+    &__item--current {
+        // color: inherit;
+        color: $red-color;
+        pointer-events: none;
+    }
+
+    &__link {
+        display: block;
+
+        color: inherit;
+
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: var(--light-gray-color);
+        }
+    }
+
+    // menu OPENED!!!!!!!!!!
+    &__nav-toggler--opened~&__wrapper {
+        pointer-events: unset;
+    }
+}
+
+@include rmin($tablet-sm) {
+    .site-menu {
+        &__nav-toggler {
+            width: 62px;
+            height: 55px;
+        }
+
+        &__item {
+            font-size: 6vmin;
+        }
+    }
+}
+
+@include rmin($tablet) {
+    .site-menu {
+        &__nav-toggler {
+            top: 20px;
+            right: 20px;
+        }
+    }
+}
+
+@include rmin($desktop) {
+    .site-menu {
+        &__nav {
+            // position: relative;
+            margin: auto 0;
+            // margin-top: 260%;
+        }
+
+        // navigation menu
+        &__wrapper {
+            // margin-top: 20px;
+
+            // left: 130px;
+
+            // transform: translateX(-120%);
+        }
+
+        // toggle button
+        &__nav-toggler {
+            top: 50%;
+            left: 45px;
+
+            transform: translateY(-50%);
+        }
+
+        &__list {
+            padding-left: 200px;
+        }
+
+        // menu OPENED!!!!!!!!
+        // &__nav-toggler--opened {
+        // 	&::before {
+        // 		opacity: 0;
+        // 	}
+
+        // 	.cross {
+        // 		transform: scale(1) translateX(25%);
+        // 	}
+        // }
+
+
+    }
+}

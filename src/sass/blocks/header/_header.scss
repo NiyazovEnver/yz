@@ -1,0 +1,212 @@
+.site-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    z-index: 1;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+
+        // background-color: var(--gray-700);
+    }
+
+    &__language-list {
+        position: relative;
+        z-index: 2;
+
+        order: -1;
+        display: flex;
+
+        visibility: hidden;
+    }
+
+    &__language-item {
+        color: var(--gray-color);
+
+        &:not(:last-child) {
+            position: relative;
+
+            margin-right: 12px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: -10px;
+
+                width: 8px;
+                height: 2px;
+
+                background-color: currentColor;
+
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__language-item--current {
+        color: inherit;
+        // font-weight: 700;
+    }
+
+    &__language-link {
+        display: block;
+        padding: 10px 5px;
+
+        font-size: 14px;
+        color: currentColor;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    &__logo-wrapper {
+        position: relative;
+        z-index: 6;
+
+        padding: 5px;
+
+        line-height: 0;
+        color: var(--text-color);
+    }
+
+    &__logo-icon {
+        // width: 44px;
+        // height: 49px;
+        fill: var(--text-color);
+    }
+
+    // contacts
+    &__contacts-wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+
+        width: 1px;
+        height: 1px;
+        clip: rect(0 0 0 0);
+
+        font-size: 1px;
+        line-height: 1px;
+    }
+
+    &__contacts-phone,
+    &__contacts-order {
+        font-size: 16px;
+        padding: 15px;
+
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+    &__contacts-order {
+        margin-left: 140px;
+        padding: 10px 30px;
+    }
+}
+
+.site-scroll {
+    width: 100% !important;
+    z-index: 10;
+}
+
+@include rmin($tablet-sm) {
+    .site-header {
+        &__language-link {
+            font-size: 16px;
+        }
+
+        &__logo-icon {
+            width: 50px;
+            height: 79px;
+        }
+    }
+}
+
+@include rmin($desktop) {
+    .site-header {
+        position: unset;
+        width: unset;
+
+        &__wrapper {
+            flex-direction: column;
+            justify-content: flex-start;
+            flex-basis: 150px;
+            min-width: 150px;
+            max-width: 150px;
+            height: calc(100vh - 60px);
+            padding-top: 40px;
+            padding-bottom: 0;
+        }
+
+        &__logo-wrapper {
+            position: absolute;
+        }
+
+        &__logo-icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        &__contacts-wrapper {
+            z-index: 5;
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: auto;
+            height: 105px;
+            padding-right: 35px;
+
+            font-size: 14px;
+            line-height: 1.2;
+            clip: auto;
+
+            // background-color: var(--gray-700);
+        }
+    }
+
+    .site-scroll {
+        // position: fixed;
+
+        &__wrapper {
+            height: 0 !important;
+        }
+
+        &__nav {
+            position: fixed;
+            height: 100%;
+            width: 150px;
+
+            & .site-menu__item {
+                min-width: 500px;
+                text-align: left;
+            }
+        }
+
+        &__menu-item {
+            min-width: 250px;
+        }
+
+        &__bg {
+            top: -40px;
+        }
+    }
+}
+
+@include rmin($desktop-lg) {
+    .site-header {
+        &__logo-icon {
+            width: 65px;
+            height: 65px;
+        }
+    }
+}
+
+
+
+@include rmin($desktop) {}

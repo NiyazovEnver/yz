@@ -1,0 +1,87 @@
+.projects-added {
+    overflow: hidden;
+    // width: 30%;
+    height: 100vh;
+    margin-top: 69px;
+
+    margin: 0 auto;
+    padding: 30px 45px;
+    
+  
+
+    &__project{
+        outline: 1px solid white;
+    }
+
+    &__title{
+        width: 100%;
+
+        margin-bottom: 15px;
+        display: block;
+        
+        text-align: center;
+    }
+    &__description{
+        width: 100%;
+
+        margin-bottom: 15px;
+        display: block;
+        
+        text-align: center;
+    }
+   
+}
+
+@include rmin($tablet-xs) {
+    .projects-added {
+        padding: 40px 55px;
+
+       
+    }
+}
+
+@include rmin($tablet) {
+    .projects-added {
+        display: flex;
+        flex-direction: column;
+
+
+     
+    }
+}
+
+@include rmin($desktop) {
+    .projects-added {
+        display: flex;
+        height: 89vh;
+        width: 100%;
+
+        margin-top: unset;
+        padding: unset;
+
+        &__list{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+
+            margin-top: 15px;
+            
+        }
+
+        &__project{
+            width: 32%;
+
+            margin-top: 8px;
+            margin-bottom: 8px;
+            margin-right: 8px;
+            margin-left: 8px;
+            outline: 1px solid white;
+            
+        }
+     
+
+
+       
+    }
+}

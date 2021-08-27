@@ -1,0 +1,9 @@
+mixin cards(card1='',card2='')
+    .cards__inner
+        .cards
+            .cards__item
+                picture
+                    img(src=`${card1}.jpg` srcset=`${card1}@2x.jpg 2x` alt='')
+            .cards__item
+                picture
+                    img(src=`${card2}.jpg` srcset=`${card2}@2x.jpg 2x` alt='')

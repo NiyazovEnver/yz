@@ -1,0 +1,98 @@
+.about-company {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    height: calc(100vh - 105px);
+
+    &__text-wrapper {
+        max-width: 1610px;
+        display: block;
+    }
+
+    &__animated-text-wrapper {
+        position: relative;
+        height: calc(100% - 200px);
+
+        margin-top: 69px;
+        padding: 45px;
+    }
+
+    &__text {
+        // display: block;
+
+        font-size: 7.1vmin;
+        font-weight: 500;
+    }
+}
+
+.f-letter {
+    color: #d41a2e;
+}
+
+.typed-cursor {
+    font-size: 6vmin;
+}
+
+@include rmin($tablet) {
+    .about-company {
+        &__animated-text-wrapper {
+            margin-top: 109px;
+            padding: 45px 95px;
+        }
+    }
+}
+
+@include rmin($desktop) {
+    .about-company {
+        // height: 100%;
+
+        &__animated-text-wrapper {
+            width: 100%;
+
+            margin-top: 85px;
+            padding: 0 30px 0 0;
+        }
+
+        &__text-wrapper {
+            margin-right: 20px;
+        }
+
+        &__text {
+            font-size: 5.4vmin;
+        }
+    }
+}
+
+@include rmin($desktop-xs) {
+    .about-company {
+        &__animated-text-wrapper {
+            width: 48%;
+        }
+    }
+}
+
+@include rmin($desktop-md) {
+    .about-company {
+        &__animated-text-wrapper {
+            margin-top: 135px;
+            width: 50%;
+        }
+    }
+}
+
+@include rmin($desktop-lg) {
+    .about-company {
+        &__animated-text-wrapper {
+            width: 41%;
+        }
+    }
+}
+
+@include rmin($desktop-retina) {
+    .about-company {
+        &__animated-text-wrapper {
+            margin-top: 200px;
+            width: 40%;
+        }
+    }
+}

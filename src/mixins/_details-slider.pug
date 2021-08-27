@@ -1,0 +1,27 @@
+mixin details_slider(img1='',img2='',img3='')
+    .glide-details__inner
+        .glide-details__wrapper
+            #devlet__details-slider.glide.glide-details
+                .glide__track(data-glide-el='track')
+                    ul.glide__slides.glide-details__slides
+                        li.glide__slide.glide-details__slide
+                            picture
+                                img(src=`${img1}.jpg` srcset=`${img1}@2x.jpg 2x` alt='')
+                        li.glide__slide.glide-details__slide
+                            picture
+                                img(src=`${img2}.jpg` srcset=`${img2}@2x.jpg 2x` alt='')
+                        li.glide__slide.glide-details__slide
+                            picture
+                                img(src=`${img3}.jpg` srcset=`${img3}@2x.jpg 2x` alt='')
+                .glide-details__items
+                    .glide-details__bullets(data-glide-el='controls[nav]')
+                        button.glide-details__bullet(data-glide-dir='=0')
+                        button.glide-details__bullet(data-glide-dir='=1')
+                        button.glide-details__bullet(data-glide-dir='=2')
+                    .glide-details__arrows(data-glide-el='controls')
+                        button.glide-details__arrow.glide-details__arrow--prev(data-glide-dir='<')
+                            svg.glide-details__icon
+                                use(xlink:href='./img/sprite.svg#icon-bck')
+                        button.glide-details__arrow.glide-details__arrow--next(data-glide-dir='>')
+                            svg.glide-details__icon
+                                use(xlink:href='./img/sprite.svg#icon-nxt')

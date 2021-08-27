@@ -1,0 +1,84 @@
+.projects {
+    padding: 0;
+
+    h1 {
+        position: absolute;
+    }
+
+    &__item-link {
+        position: relative;
+        display: flex;
+        text-decoration: none;
+        color: $white-color;
+        padding-left: 20px;
+        font-weight: 300;
+        font-size: 2vmax;
+
+        &::before {
+            content: '';
+            width: 15px;
+            height: 1px;
+            background-color: $white-color;
+
+            position: absolute;
+            top: 50%;
+            left: 0;
+        }
+    }
+
+    &__item-number {
+        color: var(--same-color);
+        margin-right: 5px;
+
+        font-size: 18px;
+        position: relative;
+        top: -10px;
+    }
+
+    .glide__bullet--active &__item-number {
+        color: $red-color;
+
+    }
+}
+
+@include rmin($tablet) {
+    .projects {
+        &__item-number {
+            font-size: 30px;
+            top: -15px;
+        }
+
+        &__item-link {
+            padding-left: 45px;
+
+            &::before {
+                width: 35px;
+            }
+        }
+    }
+}
+
+@include rmin($desktop) {
+    .projects {
+        &__item-number {
+            font-size: 2.5vmin;
+            top: -10px;
+        }
+
+        &__item-link {
+            font-size: 2vmin;
+
+            &::before {
+                box-shadow: 0 0 2px var(--gray-color);
+            }
+        }
+    }
+}
+
+@include rmin($desktop-lg) {
+    .projects {
+        &__item-number {
+            top: -15px;
+        }
+    }
+}
