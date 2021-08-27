@@ -11,7 +11,7 @@
               </span>
             </div>
             <span id="typed-text"></span><a class="main-page__btn btn projects__item-link main-page__animate" href="proj">все Проекты<svg class="icon icon-next main-page__btn-svg">
-                <use xlink:href="/img/sprite.svg#icon-next"></use>
+                <use xlink:href="./img/sprite.svg#icon-next"></use>
               </svg></a>
           </div>
           <div class="main-slider main-page__animate">
@@ -55,13 +55,15 @@
                   <h2 class="project-cards__text-item main-page__text-item">Последние проекты </h2>
                   <div class="glide-details__arrows" data-glide-el="controls">
                     <button class="glide-details__arrow glide-details__arrow--prev" data-glide-dir="<">
-                      <svg class="glide-details__icon">
-                        <use xlink:href="./img/sprite.svg#icon-bck" />
+                      
+                      <svg class="glide-details__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+                          <path d="M57.633 129.007L165.93 237.268c4.752 4.74 12.451 4.74 17.215 0 4.752-4.74 4.752-12.439 0-17.179l-99.707-99.671 99.695-99.671c4.752-4.74 4.752-12.439 0-17.191-4.752-4.74-12.463-4.74-17.215 0L57.621 111.816c-4.679 4.691-4.679 12.511.012 17.191z"/>
                       </svg>
                     </button>
                     <button class="glide-details__arrow glide-details__arrow--next" data-glide-dir=">">
-                      <svg class="glide-details__icon">
-                        <use xlink:href="./img/sprite.svg#icon-nxt" />
+                      
+                      <svg class="glide-details__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" >
+                        <path d="M183.189 111.816L74.892 3.555c-4.752-4.74-12.451-4.74-17.215 0-4.752 4.74-4.752 12.439 0 17.179l99.707 99.671-99.695 99.671c-4.752 4.74-4.752 12.439 0 17.191 4.752 4.74 12.463 4.74 17.215 0l108.297-108.261c4.68-4.691 4.68-12.511-.012-17.19z"/>
                       </svg>
                     </button>
                   </div>

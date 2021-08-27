@@ -1,4 +1,4 @@
-
+import $ from 'jquery'
 export default () => {
 
   $('.capitalize__item').html(function(i, html)

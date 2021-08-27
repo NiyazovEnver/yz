@@ -44,12 +44,34 @@
                     </div>
                     </p>
                     <div class="product-details__links">
-                      <a href="https://play.google.com/store/apps/details?id=com.anayurt.doza&hl=ru&gl=US" target="_blank" class="product-details__link product-details__link--red"><svg class="icon icon-gp product-details__icon">
-                          <use xlink:href="img/sprite.svg#icon-gp"></use>
-                        </svg>Google Play</a>
-                      <a href="https://apps.apple.com/ru/app/doza/id1498438679" target="_blank" class="product-details__link"><svg class="icon icon-as product-details__icon">
-                          <use xlink:href="img/sprite.svg#icon-as"></use>
-                        </svg>App Store</a>
+                      <a href="https://play.google.com/store/apps/details?id=com.anayurt.doza&hl=ru&gl=US" target="_blank" class="product-details__link product-details__link--red">
+                     
+                        <svg class="icon icon-gp product-details__icon" width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0)">
+                          <path d="M10.2897 10.0853L13.484 6.891L3.16657 1.09223C2.48277 0.72279 1.84219 0.670939 1.28046 1.07495L10.2897 10.0853ZM14.0285 13.8251L17.3491 11.9574C17.9973 11.5944 18.3527 11.0802 18.3527 10.5098C18.3527 9.94054 17.9973 9.42526 17.3502 9.0623L14.3439 7.37387L10.9595 10.7572L14.0285 13.8251ZM0.725212 1.86029C0.656076 2.0731 0.617188 2.31075 0.617188 2.57109V18.4561C0.617188 18.8677 0.707928 19.222 0.872126 19.504L9.61889 10.7561L0.725212 1.86029ZM10.2897 11.4259L1.59157 20.1251C1.75793 20.1888 1.93725 20.2223 2.12629 20.2223C2.46333 20.2223 2.81441 20.1229 3.17197 19.9242L13.1697 14.3101L10.2897 11.4259Z" fill="white"/>
+                          </g>
+                          <defs>
+                          <clipPath id="clip0">
+                          <rect width="18.5185" height="20" fill="white" transform="translate(0 0.5)"/>
+                          </clipPath>
+                          </defs>
+                        </svg>
+
+                        Google Play</a>
+                      <a href="https://apps.apple.com/ru/app/doza/id1498438679" target="_blank" class="product-details__link"
+                      >
+                        <svg class="icon icon-as product-details__icon" width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0)">
+                            <path d="M16.3299 16.0282C16.0413 16.696 15.6993 17.3106 15.303 17.8758C14.763 18.6472 14.3194 19.1802 13.9795 19.4769C13.4515 19.9617 12.8842 20.2111 12.2778 20.2252C11.8433 20.2252 11.3183 20.1015 10.7068 19.8501C10.0933 19.5996 9.53005 19.4769 9.01411 19.4769C8.47402 19.4769 7.89471 19.5996 7.27416 19.8501C6.65462 20.1015 6.15376 20.2333 5.77057 20.2453C5.19026 20.2705 4.60994 20.015 4.03164 19.4769C3.66253 19.1551 3.20089 18.6019 2.64672 17.8195C2.05333 16.9857 1.56554 16.0152 1.18336 14.9119C0.77402 13.718 0.568848 12.5634 0.568848 11.445C0.568848 10.1647 0.845428 9.05941 1.3996 8.13412C1.83609 7.38987 2.4154 6.80352 3.13954 6.37306C3.86468 5.94159 4.64916 5.72133 5.49299 5.70725C5.95563 5.70725 6.5621 5.85007 7.31339 6.13168C8.06468 6.41329 8.54744 6.5561 8.75764 6.5561C8.91655 6.5561 9.4506 6.38814 10.3598 6.05524C11.2177 5.74648 11.9418 5.61875 12.5352 5.66903C14.1444 5.79878 15.3523 6.4324 16.1559 7.57493C14.7177 8.44691 14.0066 9.66688 14.0207 11.2328C14.0328 12.4528 14.4763 13.4676 15.3453 14.2732C15.7395 14.6473 16.179 14.936 16.6678 15.1412C16.5612 15.4499 16.4486 15.7446 16.3299 16.0282ZM12.6418 1.51429C12.6418 2.46975 12.2918 3.36286 11.5969 4.18858C10.7561 5.17018 9.74026 5.73843 8.63896 5.64892C8.62488 5.53427 8.61784 5.41358 8.61784 5.28685C8.61784 4.3686 9.01612 3.38699 9.72718 2.5834C10.0812 2.17708 10.5318 1.83814 11.0779 1.5686C11.623 1.30309 12.138 1.15625 12.6227 1.1311C12.6358 1.25984 12.6418 1.38757 12.6418 1.51429Z" fill="white"/>
+                          </g>
+                          <defs>
+                          <clipPath id="clip0">
+                          <rect width="17.2414" height="20" fill="white" transform="translate(0 0.5)"/>
+                          </clipPath>
+                          </defs>
+                        </svg>
+
+                        App Store</a>
                     </div>
                   </div>
                 </div>
@@ -73,11 +95,15 @@
                   </div>
                   <div class="glide-details__items">
                     <div class="glide-details__bullets" data-glide-el="controls[nav]"><button class="glide-details__bullet" data-glide-dir="=0"></button><button class="glide-details__bullet" data-glide-dir="=1"></button><button class="glide-details__bullet" data-glide-dir="=2"></button></div>
-                    <div class="glide-details__arrows" data-glide-el="controls"><button class="glide-details__arrow glide-details__arrow--prev" data-glide-dir="&lt;"><svg class="glide-details__icon">
-                          <use xlink:href="./img/sprite.svg#icon-bck"></use>
-                        </svg></button><button class="glide-details__arrow glide-details__arrow--next" data-glide-dir="&gt;"><svg class="glide-details__icon">
-                          <use xlink:href="./img/sprite.svg#icon-nxt"></use>
-                        </svg></button></div>
+                    <div class="glide-details__arrows" data-glide-el="controls"><button class="glide-details__arrow glide-details__arrow--prev" data-glide-dir="&lt;">
+                       <svg class="glide-details__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+                          <path d="M57.633 129.007L165.93 237.268c4.752 4.74 12.451 4.74 17.215 0 4.752-4.74 4.752-12.439 0-17.179l-99.707-99.671 99.695-99.671c4.752-4.74 4.752-12.439 0-17.191-4.752-4.74-12.463-4.74-17.215 0L57.621 111.816c-4.679 4.691-4.679 12.511.012 17.191z"/>
+                      </svg>
+                        </button><button class="glide-details__arrow glide-details__arrow--next" data-glide-dir="&gt;">
+                         <svg class="glide-details__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" >
+                        <path d="M183.189 111.816L74.892 3.555c-4.752-4.74-12.451-4.74-17.215 0-4.752 4.74-4.752 12.439 0 17.179l99.707 99.671-99.695 99.671c-4.752 4.74-4.752 12.439 0 17.191 4.752 4.74 12.463 4.74 17.215 0l108.297-108.261c4.68-4.691 4.68-12.511-.012-17.19z"/>
+                      </svg>
+                        </button></div>
                   </div>
                 </div>
               </div>
@@ -88,13 +114,13 @@
                   <h2 class="project-cards__text-item">Наши проекты </h2>
                   <div class="glide-details__arrows" data-glide-el="controls">
                     <button class="glide-details__arrow glide-details__arrow--prev" data-glide-dir="<">
-                      <svg class="glide-details__icon">
-                        <use xlink:href="./img/sprite.svg#icon-bck" />
+                       <svg class="glide-details__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+                          <path d="M57.633 129.007L165.93 237.268c4.752 4.74 12.451 4.74 17.215 0 4.752-4.74 4.752-12.439 0-17.179l-99.707-99.671 99.695-99.671c4.752-4.74 4.752-12.439 0-17.191-4.752-4.74-12.463-4.74-17.215 0L57.621 111.816c-4.679 4.691-4.679 12.511.012 17.191z"/>
                       </svg>
                     </button>
                     <button class="glide-details__arrow glide-details__arrow--next" data-glide-dir=">">
-                      <svg class="glide-details__icon">
-                        <use xlink:href="./img/sprite.svg#icon-nxt" />
+                      <svg class="glide-details__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" >
+                        <path d="M183.189 111.816L74.892 3.555c-4.752-4.74-12.451-4.74-17.215 0-4.752 4.74-4.752 12.439 0 17.179l99.707 99.671-99.695 99.671c-4.752 4.74-4.752 12.439 0 17.191 4.752 4.74 12.463 4.74 17.215 0l108.297-108.261c4.68-4.691 4.68-12.511-.012-17.19z"/>
                       </svg>
                     </button>
                   </div>
