@@ -15,6 +15,9 @@
             </li>
           </ul>
           <div class="site-header__contacts-wrapper">
+            
+                  <router-link class="btn site-header__login-link" to="/login">Login</router-link>
+               
             <a href="./contacts" class="btn site-header__contacts-order">Заказать</a>
           </div>
           <nav class="site-menu__nav">
@@ -29,14 +32,19 @@
             <div class="site-menu__wrapper">
               <ul class="site-menu__list">
                 <li class="site-menu__item site-menu__item--current">
-                  <a href="./main" class="site-menu__link">О нас</a>
+                   <router-link class="site-menu__link" to="./main">О нас</router-link>
                 </li>
+                
                 <li class="site-menu__item">
                   <a href="./projects" class="site-menu__link">Проекты</a>
+                  <!-- <router-link class="site-menu__link" to="./projects">Проекты</router-link> -->
                 </li>
                 <li class="site-menu__item">
                   <a href="./contacts" class="site-menu__link">Контакты</a>
+                  <!-- <router-link class="site-menu__link" to="./contacts">Контакты</router-link> -->
                 </li>
+               
+                
                 <li>
                   <button class="theme-switcher">
               

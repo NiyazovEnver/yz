@@ -5,11 +5,11 @@ import Login from '@/components/Login'
 import Register from '@/components/Register'
 
 import store from '@/store/index.js'
-import Projects from '@/components/Projects'
+import Proj from '@/components/Projects'
 import Secure from '@/components/Secure.vue'
 import Add from '@/components/Add.vue'
 import Main from '@/views/Main.vue'
-import Proj from '@/views/Proj.vue'
+import Projects from '@/views/Projects.vue'
 import Contacts from '@/views/Contacts.vue'
 import Details from '@/views/Details.vue'
 import ProjDevlet from '@/views/Proj-devlet.vue'
@@ -26,9 +26,9 @@ let router = new Router({
   mode: 'history',
   routes: [
     {
-      path: '/projects',
-      name: 'projects',
-      component: Projects
+      path: '/proj',
+      name: 'proj',
+      component: Proj
     },
     {
       path: '/login',
@@ -63,9 +63,9 @@ let router = new Router({
     },
     
     {
-      path: '/proj',
-      name: 'Proj',
-      component: Proj
+      path: '/projects',
+      name: 'Projects',
+      component: Projects
     },
     {
       path: '/contacts',

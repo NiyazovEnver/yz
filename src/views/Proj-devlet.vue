@@ -1,4 +1,5 @@
 <template>
+
     <section data-router-view="details" id="project__page-scroll">
           <div class="product-details">
             <div class="product-details__wrapper">

@@ -1,5 +1,5 @@
 <template>
-<div class="login" data-router-view="login">
+<div class="login">
     <div class="login__wrapper">
         <div class="login-container">
 

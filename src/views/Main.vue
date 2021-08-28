@@ -1,5 +1,4 @@
 <template>
-    
         <section class="about-company main-content" data-router-view="main">
           <h1>О нас</h1>
           <div class="about-company__animated-text-wrapper">

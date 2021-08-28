@@ -5,6 +5,14 @@
 
     z-index: 1;
 
+    &__login-link{
+        font-size: 16px;
+        padding: 15px;
+
+        color: var(--text-color);
+        text-decoration: none;
+        
+    }
     &__wrapper {
         display: flex;
         justify-content: space-between;

@@ -17,11 +17,9 @@
 
 
 <style lang="scss">
-  // .main{
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  // }
+  #app{
+    height: 100vh;
+  }
 </style>
 <script>
 import store from './store'
