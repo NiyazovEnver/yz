@@ -82,8 +82,8 @@
     }
 
     &__logo-icon {
-        // width: 44px;
-        // height: 49px;
+        width: 44px;
+        height: 49px;
         fill: var(--text-color);
     }
 
@@ -112,7 +112,6 @@
     }
 
     &__contacts-order {
-        margin-left: 140px;
         padding: 10px 30px;
     }
 }

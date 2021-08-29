@@ -16,8 +16,6 @@
           </ul>
           <div class="site-header__contacts-wrapper">
             
-                  <router-link class="btn site-header__login-link" to="/login">Login</router-link>
-               
             <a href="./contacts" class="btn site-header__contacts-order">Заказать</a>
           </div>
           <nav class="site-menu__nav">
@@ -43,6 +41,19 @@
                   <a href="./contacts" class="site-menu__link">Контакты</a>
                   <!-- <router-link class="site-menu__link" to="./contacts">Контакты</router-link> -->
                 </li>
+                <li v-if="!isLoggedIn" class="site-menu__item">
+                  <a class="site-menu__link" href="./login">Авторизация</a>
+                </li>
+                <li v-if="isLoggedIn" class="site-menu__item">
+                  
+                  <router-link to="/addProjects" class="site-menu__link">Добавить проект</router-link>  
+                </li>
+                <li v-if="isLoggedIn" class="site-menu__item">
+                  
+                  <a @click="logout">Выйти</a> 
+                </li>
+                
+
                
                 
                 <li>

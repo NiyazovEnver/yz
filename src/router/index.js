@@ -3,9 +3,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '@/components/Login'
 import Register from '@/components/Register'
-
 import store from '@/store/index.js'
-import Proj from '@/components/Projects'
+import ProjectAdded from '@/components/ProjectsAdded'
 import Secure from '@/components/Secure.vue'
 import Add from '@/components/Add.vue'
 import Main from '@/views/Main.vue'
@@ -26,9 +25,9 @@ let router = new Router({
   mode: 'history',
   routes: [
     {
-      path: '/proj',
-      name: 'proj',
-      component: Proj
+      path: '/project-added',
+      name: 'project-added',
+      component: ProjectAdded
     },
     {
       path: '/login',
@@ -49,7 +48,7 @@ let router = new Router({
       }
     },
     {
-      path: '/main',
+      path: '/',
       name: 'main',
       component: Main
     },
@@ -57,19 +56,19 @@ let router = new Router({
       path: '/addProjects',
       name: 'addProjects',
       component: Add,
-      // meta: { 
-      //   requiresAuth: true
-      // }
+      meta: { 
+        requiresAuth: true
+      }
     },
     
     {
       path: '/projects',
-      name: 'Projects',
+      name: 'projects',
       component: Projects
     },
     {
       path: '/contacts',
-      name: 'Contacts',
+      name: 'contacts',
       component: Contacts
     },
     {

@@ -88,6 +88,6 @@
 
 <script>
 export default {
-    name: 'Proj'
+    name: 'projects'
 }
 </script>

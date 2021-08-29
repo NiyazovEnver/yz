@@ -6,14 +6,24 @@
     margin: 0 auto;
     padding: 30px 45px;
     
-
-
-
+    &__registration-link{
+        color: var(--text-color);
+    }
+    &__registration{
+        margin-top: 20px;
+        margin-right: 10px;
+        display: inline;
+    }
+    
+    h1{
+        display: block;
+    }
    
 
     
     &__form {
-        margin-top: 30px;
+        margin-top: 50px;
+        margin-bottom: 10px;
     }
 
     &__input {
@@ -44,9 +54,7 @@
         font-weight: bold;
     }
 
-    &-map {
-        display: none;
-    }
+   
 }
 
 @include rmin($tablet-xs) {
@@ -60,7 +68,7 @@
 
        
         &__form {
-            margin-top: 25px;
+            margin-top: 100px;
         }
 
        
@@ -78,6 +86,7 @@
         display: flex;
         flex-direction: column;
 
+    
         &__submit-btn {
             width: 100%;
         }
@@ -89,9 +98,9 @@
 @include rmin($desktop) {
     .login {
         display: flex;
-        flex-direction: unset;
+        // flex-direction: unset;
         align-items: center;
-        width: 30%;
+        // width: 30%;
 
         margin-top: unset;
         padding: unset;
@@ -130,6 +139,7 @@
         &__submit-btn {
             width: 220px;
             text-align: center;
+            margin: 10px auto;
         }
 
        

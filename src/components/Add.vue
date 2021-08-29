@@ -24,19 +24,10 @@
         placeholder="Описание проекта"
         required="">
     </p>
-<!--     <p class="add-projects__input-field">
-      <label for="message" class="visually-hidden">Изображение</label>
-      <input
-      v-model="img"
-      class="add-projects__input"
-      type="text" id="message"
-      name="description"
-      placeholder="Изображение"
-      required="">
-    </p>-->
+
     <div class="add-projects__attach-file">
     <input class="visually-hidden" type="file" name="img" id="file" @change="onImageChange"/>
-    <label class="add-projects__attach-file-label" for="file">Прикрепить Файл</label>
+    <label class="add-projects__attach-file-label" for="file">Добавить изображение</label>
     </div>
     <div class="add-projects__attach-submit">
       <div class="add-projects__submit">

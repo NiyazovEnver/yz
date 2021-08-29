@@ -2,9 +2,9 @@
 <div class="login">
     <div class="login__wrapper">
         <div class="login-container">
-
+            
                 <form class="login__form" @submit.prevent="login">
-                    <h1>Sign in</h1>
+                    <h1>Авторизация</h1>
                     <p class="login__input-field">
                         <label class="visually-hidden">Email</label>
                         <input class="login__input" required v-model="email" type="email" placeholder="Name"/>
@@ -15,6 +15,8 @@
                     </p>
                     <button class="btn login__submit-btn" type="submit">Login</button>
                 </form>
+                <p class="login__registration">Вы ещё не зарегистрированы?</p><router-link class="login__registration-link" to="/register">Зарегистрируйтесь</router-link>
+        
         </div>
     </div>
 </div>
