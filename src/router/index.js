@@ -4,10 +4,9 @@ import Router from 'vue-router'
 import Login from '@/components/Login'
 import Register from '@/components/Register'
 import store from '@/store/index.js'
-import ProjectAdded from '@/components/ProjectsAdded'
-// import Secure from '@/components/Secure.vue'
-import AddProjects from '@/components/AddProjects.vue'
-import PageMain from '@/views/PageMain.vue'
+import ProjectAdded from '@/components/Projects-added'
+import AddProjects from '@/components/Add-projects.vue'
+import PageMain from '@/views/Page-main.vue'
 import Projects from '@/views/Projects.vue'
 import Contacts from '@/views/Contacts.vue'
 import Details from '@/views/Details.vue'
@@ -45,14 +44,7 @@ let router = new Router({
         layout: true
       }
     },
-    // {
-    //   path: '/secure',
-    //   name: 'secure',
-    //   component: Secure,
-    //   meta: { 
-    //     requiresAuth: true
-    //   }
-    // },
+ 
     {
       path: '/',
       name: 'page-main',
@@ -62,8 +54,8 @@ let router = new Router({
       }
     },
     {
-      path: '/addProjects',
-      name: 'addProjects',
+      path: '/add-projects',
+      name: 'add-projects',
       component: AddProjects,
       meta: { 
         requiresAuth: true

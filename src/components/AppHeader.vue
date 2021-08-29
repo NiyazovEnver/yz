@@ -32,7 +32,9 @@
                 <li class="site-menu__item site-menu__item--current">
                    <router-link tag="a" class="site-menu__link" to="/">О нас</router-link>
                 </li>
-                
+                <li v-if="isLoggedIn" class="site-menu__item">
+                  <router-link tag="a" to="/add-projects" class="site-menu__link">Добавить проект</router-link >  
+                </li>
                 <li class="site-menu__item">
                   <router-link tag="a" to="/projects" class="site-menu__link">Проекты</router-link >
                 </li>
@@ -42,10 +44,7 @@
                 <li v-if="!isLoggedIn" class="site-menu__item">
                   <router-link tag="a" class="site-menu__link" to="/login">Авторизация</router-link >
                 </li>
-                <li v-if="isLoggedIn" class="site-menu__item">
-                  
-                  <router-link tag="a" to="/addProjects" class="site-menu__link">Добавить проект</router-link >  
-                </li>
+                
                 <li v-if="isLoggedIn" class="site-menu__item">
                   
                   <a @click="logout">Выйти</a> 
