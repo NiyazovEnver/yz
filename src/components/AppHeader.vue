@@ -15,7 +15,7 @@
             </li>
           </ul>
           <div class="site-header__contacts-wrapper">
-            <router-link to="/project-added" tag="a">Все проекты</router-link>
+            <router-link to="/project-added" tag="a" class="site-header__all-projects">Все проекты</router-link>
             <a href="./contacts" class="btn site-header__contacts-order">Заказать</a>
           </div>
           <nav class="site-menu__nav">
