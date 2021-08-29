@@ -8,8 +8,6 @@ import './lib';
 import './animations';
 
 
-console.log('Hello from legacy js');
-
 try {
   const form = $('.contacts__contact-form');
   form.on('submit', () => {

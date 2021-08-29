@@ -6,10 +6,12 @@ import router from './router'
 import Axios from 'axios'
 import store  from "./store/index.js";
 import '@/sass/app.sass'
-import Highway from '@dogstudio/highway';
-// import './js/app.js.map'
-// import './js/app.js'
+// import defaultLayout from './layouts/default'
+// import noFooter from './layouts/noFooter'
 
+
+// Vue.component("default-layout", defaultLayout)
+// Vue.component("no-footer", noFooter)
 
 Vue.prototype.$http = Axios;
 
@@ -23,7 +25,6 @@ new Vue({
   el: '#app',
   router,
   store,
-  Highway,
   components: { App },
   template: '<App/>'
 })

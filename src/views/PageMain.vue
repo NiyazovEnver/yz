@@ -76,6 +76,6 @@
 
 <script>
 export default {
-    name: 'main'
+    name: 'PageMain'
 }
 </script>

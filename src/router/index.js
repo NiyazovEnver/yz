@@ -5,9 +5,9 @@ import Login from '@/components/Login'
 import Register from '@/components/Register'
 import store from '@/store/index.js'
 import ProjectAdded from '@/components/ProjectsAdded'
-import Secure from '@/components/Secure.vue'
-import Add from '@/components/Add.vue'
-import Main from '@/views/Main.vue'
+// import Secure from '@/components/Secure.vue'
+import AddProjects from '@/components/AddProjects.vue'
+import PageMain from '@/views/PageMain.vue'
 import Projects from '@/views/Projects.vue'
 import Contacts from '@/views/Contacts.vue'
 import Details from '@/views/Details.vue'
@@ -27,7 +27,10 @@ let router = new Router({
     {
       path: '/project-added',
       name: 'project-added',
-      component: ProjectAdded
+      component: ProjectAdded,
+      meta: {
+        layout: false
+      }
     },
     {
       path: '/login',
@@ -37,25 +40,31 @@ let router = new Router({
     {
       path: '/register',
       name: 'register',
-      component: Register
-    },
-    {
-      path: '/secure',
-      name: 'secure',
-      component: Secure,
-      meta: { 
-        requiresAuth: true
+      component: Register,
+      meta: {
+        layout: true
       }
     },
+    // {
+    //   path: '/secure',
+    //   name: 'secure',
+    //   component: Secure,
+    //   meta: { 
+    //     requiresAuth: true
+    //   }
+    // },
     {
       path: '/',
-      name: 'main',
-      component: Main
+      name: 'page-main',
+      component: PageMain,
+      meta: {
+        layout: true
+      }
     },
     {
       path: '/addProjects',
       name: 'addProjects',
-      component: Add,
+      component: AddProjects,
       meta: { 
         requiresAuth: true
       }
@@ -69,7 +78,10 @@ let router = new Router({
     {
       path: '/contacts',
       name: 'contacts',
-      component: Contacts
+      component: Contacts,
+      meta: {
+        layout: true
+      }
     },
     {
       path: '/details',
@@ -118,7 +130,7 @@ router.beforeEach((to, from, next) => {
 })
 router.beforeEach((to, from, next) => {
   if(to.matched.some(record => record.meta.requiresAuth)) {
-      if (localStorage.getItem('jwt') == null) {
+      if (localStorage.getItem('token') == null) {
           next({
               path: '/login',
               params: { nextUrl: to.fullPath }

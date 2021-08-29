@@ -7,9 +7,8 @@
         <router-view/>
       </main>
 
-      <app-footer></app-footer>
+      <app-footer v-if="$route.meta.layout"></app-footer>
        <div class="action-blocker active"></div>
-<!--      <div class="action-blocker"></div>-->
     </div>
   </div>
 

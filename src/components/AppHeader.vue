@@ -15,7 +15,7 @@
             </li>
           </ul>
           <div class="site-header__contacts-wrapper">
-            
+            <router-link to="/project-added" tag="a">Все проекты</router-link>
             <a href="./contacts" class="btn site-header__contacts-order">Заказать</a>
           </div>
           <nav class="site-menu__nav">
@@ -30,23 +30,21 @@
             <div class="site-menu__wrapper">
               <ul class="site-menu__list">
                 <li class="site-menu__item site-menu__item--current">
-                   <router-link class="site-menu__link" to="./main">О нас</router-link>
+                   <router-link tag="a" class="site-menu__link" to="/">О нас</router-link>
                 </li>
                 
                 <li class="site-menu__item">
-                  <a href="./projects" class="site-menu__link">Проекты</a>
-                  <!-- <router-link class="site-menu__link" to="./projects">Проекты</router-link> -->
+                  <router-link tag="a" to="/projects" class="site-menu__link">Проекты</router-link >
                 </li>
                 <li class="site-menu__item">
-                  <a href="./contacts" class="site-menu__link">Контакты</a>
-                  <!-- <router-link class="site-menu__link" to="./contacts">Контакты</router-link> -->
+                  <router-link tag="a" to="/contacts" class="site-menu__link">Контакты</router-link >
                 </li>
                 <li v-if="!isLoggedIn" class="site-menu__item">
-                  <a class="site-menu__link" href="./login">Авторизация</a>
+                  <router-link tag="a" class="site-menu__link" to="/login">Авторизация</router-link >
                 </li>
                 <li v-if="isLoggedIn" class="site-menu__item">
                   
-                  <router-link to="/addProjects" class="site-menu__link">Добавить проект</router-link>  
+                  <router-link tag="a" to="/addProjects" class="site-menu__link">Добавить проект</router-link >  
                 </li>
                 <li v-if="isLoggedIn" class="site-menu__item">
                   
@@ -54,8 +52,6 @@
                 </li>
                 
 
-               
-                
                 <li>
                   <button class="theme-switcher">
               
@@ -104,20 +100,3 @@ export default {
 </script>
 
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-  #nav{
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-  }
-  .nav__link-home{
-    width: 100px;
-    height: 20px;
-    color: #000;
-    background: #fff;
-  }
-  .site-header{
-    height: 100px;
-  }
-</style>

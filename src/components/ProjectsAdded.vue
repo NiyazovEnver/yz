@@ -8,7 +8,7 @@
 
       >
 <!--        <div class="projects-added__img">{{project.img}}</div>-->
-        <img :src="`data:image/jpeg;base64,${project.img}`"/>
+        <img class="projects-added__img" :src="`data:image/jpeg;base64,${project.img}`"/>
         <h2 class="projects-added__title">{{project.title}}</h2>
         <p class="projects-added__description">{{project.description}}</p>
       </li>

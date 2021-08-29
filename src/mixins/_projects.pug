@@ -1,9 +1,0 @@
-mixin project(page='',bg_img='',logo='',text='')
-    li.glide__slide
-        a.project-cards__item(href=`${page}`)
-            img.project-cards__item-img(src=`${bg_img}` alt='')
-            .project-cards__content
-                .project-cards__logo
-                    img(src=`${logo}`)
-                span.project-cards__description.t-crop= text
-                span.project-cards__link посмотреть 
