@@ -1,5 +1,5 @@
 <template>
-        <div class="contacts" data-router-view="contacts">
+        <div class="contacts">
           <div class="contacts__wrapper">
             <div class="contacts-container">
               <!-- company info -->

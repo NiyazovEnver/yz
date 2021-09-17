@@ -1,5 +1,5 @@
 <template>
-    <section data-router-view="details" id="project__page-scroll">
+    <section id="project__page-scroll">
           <div class="product-details">
             <div class="product-details__wrapper">
               <div class="product-details__bg">
@@ -123,8 +123,14 @@
     </section>
 </template>
 <script>
-
+ 
 export default{
-    name: 'details'
+    name: 'details',
+    mounted(){
+      let recaptchaScript = document.createElement('script')
+      recaptchaScript.setAttribute('src', '../js/lib/detailsSlider.js')
+      document.head.appendChild(recaptchaScript)
+    }
 }
+
 </script>

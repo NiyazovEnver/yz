@@ -1,6 +1,5 @@
 import Glide from '@glidejs/glide';
 
-export default () => {
   setTimeout(function() {
     let animate = document.querySelectorAll('.main-page__animate');
     animate.forEach(elem => {
@@ -47,4 +46,4 @@ export default () => {
       }
     }).mount();
   }
-};
+

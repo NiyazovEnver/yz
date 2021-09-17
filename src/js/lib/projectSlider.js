@@ -1,6 +1,4 @@
 import Glide from '@glidejs/glide';
-
-export default () => {
   if (document.querySelectorAll('.project-cards__slider')) {
     // console.log('sec slider is working now');
 
@@ -73,7 +71,7 @@ export default () => {
         
       }
     }).mount();
-  }
+  
 
   // if (document.querySelector('#project-card__devlet')) {
 

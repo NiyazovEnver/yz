@@ -3,12 +3,12 @@
 .slider-projects__description-wrapper {
     transform: translateY(35px);
     transition: transform .8s, opacity .7s;
-    opacity: 0;
+    opacity: 1;
 }
 .slider-projects__text-wrapper,
 .slider-projects__description-wrapper,
 .slider-projects__img-wrapper{
-    opacity: 0;
+    opacity: 1;
 }
 
 .glide__slide--active {

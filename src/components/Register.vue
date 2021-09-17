@@ -1,5 +1,5 @@
 <template>
-  <div class="register" data-router-view="register">
+  <div class="register">
           <div class="register__wrapper">
             <div class="register-container">
     <h1>Register</h1>

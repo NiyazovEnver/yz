@@ -3,7 +3,7 @@
     <div id="loading"></div>
     <div class="site-container">
       <app-header></app-header>
-      <main data-router-wrapper>
+      <main>
         <router-view/>
       </main>
 

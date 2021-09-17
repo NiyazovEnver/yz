@@ -1,5 +1,7 @@
 <template>
-        <section class="about-company main-content projects" data-router-view="projects">
+
+        <section class="about-company main-content projects">
+        
           <h1>Проекты</h1>
           <div class="slider-projects__wrapper">
             <div class="glide slider-projects projects-slider">
@@ -12,7 +14,8 @@
                       </svg></button></div>
               <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
-                  <li class="glide__slide">
+                  
+                   <!-- <li class="glide__slide">
                     <div class="slider-projects__description-wrapper"><span class="slider-projects__tag">Торговая площадка</span>
                       <h3>TT-Turk</h3>
                       <p class="slider-projects__description">Виртуальная торговая площадка, предоставляющая возможность покупать товары производителей из Турции. Товары на площадке продаются в розницу и оптом.</p>
@@ -22,8 +25,21 @@
                         <h2>TT-Turk</h2><a class="projects__item-link" href="./details">Посмотреть</a>
                       </div><img class="slider-projects__img" src="../img/projects/tturk.jpg" alt="" />
                     </div>
+                  </li> -->
+                  <li v-for="project in projects"
+                      :key="project.id" 
+                      class="glide__slide">
+                    <div class="slider-projects__description-wrapper"><span class="slider-projects__tag">Торговая площадка</span>
+                      <h3>{{project.title}}</h3>
+                      <p class="slider-projects__description">{{project.description}}</p>
+                    </div>
+                    <div class="slider-projects__img-wrapper">
+                      <div class="slider-projects__text-wrapper">
+                        <h2>{{project.title}}</h2><a class="projects__item-link" href="./details">Посмотреть</a>
+                      </div><img class="slider-projects__img" :src="`data:image/jpeg;base64,${project.img}`" alt="" />
+                    </div>
                   </li>
-                  <li class="glide__slide">
+                  <!-- <li class="glide__slide">
                     <div class="slider-projects__description-wrapper"><span class="slider-projects__tag">Предоставление услуг</span>
                       <h3>gild</h3>
                       <p class="slider-projects__description">Надежный инструмент по подбору исполнителей</p>
@@ -77,17 +93,70 @@
                         <h2>DS Library</h2><a class="projects__item-link" href="./proj-library">Посмотреть</a>
                       </div><img class="slider-projects__img" src="../img/projects/ds-lib.jpg" alt="" />
                     </div>
-                  </li>
+                  </li>  -->
+                                   
                 </ul>
               </div>
-              <div class="glide__bullets" data-glide-el="controls[nav]"><button class="glide__bullet" data-glide-dir="=0"><span class="projects__item-number">01</span>tt-turk</button><button class="glide__bullet" data-glide-dir="=1"><span class="projects__item-number">02</span>gild</button><button class="glide__bullet" data-glide-dir="=2"><span class="projects__item-number">03</span>doza</button><button class="glide__bullet" data-glide-dir="=3"><span class="projects__item-number">04</span>sportcity</button><button class="glide__bullet" data-glide-dir="=4"><span class="projects__item-number">05</span>DS Museum</button><button class="glide__bullet" data-glide-dir="=5"><span class="projects__item-number">06</span>DS Library </button></div>
+              <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0">
+                  <span class="projects__item-number">01</span>
+                  tt-turk
+                  </button>
+                <button class="glide__bullet" data-glide-dir="=1">
+                    <span class="projects__item-number">02</span>
+                    Yuzum
+                </button>
+                 <button class="glide__bullet" data-glide-dir="=2">
+                    <span class="projects__item-number">03</span>
+                    gild
+                </button>
+                <button class="glide__bullet" data-glide-dir="=3">
+                  <span class="projects__item-number">04</span>
+                  doza
+                </button><button class="glide__bullet" data-glide-dir="=4">
+                  <span class="projects__item-number">05</span>
+                  sportcity
+                </button>
+                <button class="glide__bullet" data-glide-dir="=5">
+                  <span class="projects__item-number">06</span>
+                  DS Museum
+                </button>
+                <button class="glide__bullet" data-glide-dir="=6">
+                  <span class="projects__item-number">07</span>
+                  DS Library
+                </button>
+               
+              </div>
             </div>
           </div>
         </section>
 </template>
 
 <script>
+
+  
 export default {
-    name: 'projects'
+    name: 'projects',
+      data(){
+    return{
+      projects: []
+    }
+  },
+  mounted(){
+    this.getProjects()
+    let recaptchaScript = document.createElement('script')
+    recaptchaScript.setAttribute('src', '../js/lib/projectSlider.js')
+    document.head.appendChild(recaptchaScript)
+  },
+  methods:{
+    
+    getProjects(){
+      this.$http.get('http://localhost:3000/projects')
+      .then(response =>{
+        this.projects = response.data
+      })
+    }
+  }
 }
+
 </script>

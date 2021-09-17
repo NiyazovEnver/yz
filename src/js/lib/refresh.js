@@ -1,5 +1,3 @@
-export default () => { 
-
   let links=document.querySelectorAll('.project-cards__item');
 
   //reload the new page after clicking on link in 'project-cards'
@@ -25,8 +23,5 @@ export default () => {
     document.querySelector('.site-header__wrapper').classList.add('site-scroll__wrapper');
     document.querySelector('.site-menu__nav').classList.add('site-scroll__nav');
     // document.querySelectorAll('.site-footer').style.display = 'none';  
-    document.querySelector('.site-footer__info-wrapper').style.display = 'none';
+    // document.querySelector('.site-footer__info-wrapper').style.display = 'none';
   }
-
-
-};

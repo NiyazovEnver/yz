@@ -1,11 +1,15 @@
 import $ from 'jquery';
 
 /*** MY MODULES 🧐 ***/
-import './utils/';
+import './utils/index';
 import './lib';
+
+// import './lib/detailsSlider'
 
 // animations
 import './animations';
+
+
 
 
 try {

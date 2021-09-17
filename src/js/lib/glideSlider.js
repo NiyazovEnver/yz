@@ -1,6 +1,5 @@
 import Glide from '@glidejs/glide';
 
-export default () => {
   if (document.querySelector('.projects-slider')) {
     new Glide('.projects-slider', {
       type: 'slider',
@@ -28,6 +27,6 @@ export default () => {
       }
     }).mount();
   }
-};
+
 
 

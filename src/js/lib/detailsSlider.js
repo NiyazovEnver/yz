@@ -1,6 +1,6 @@
 import Glide from '@glidejs/glide';
 
-export default () => {
+
   if (document.querySelectorAll('.glide-details')) {
     new Glide('.glide-details', {
       type: 'carousel',
@@ -35,6 +35,5 @@ export default () => {
       }
     }).mount();
   }
-};
 
 
