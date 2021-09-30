@@ -1,7 +1,7 @@
 import './themeSwitcher';
 import './fullscreen';
 import './mainSlider';
-import './glideSlider';
+// import './glideSlider';
 import './typed';
 import './refresh';
 // import './detailsSlider'

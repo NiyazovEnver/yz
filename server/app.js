@@ -72,7 +72,7 @@ router.post('/login', (req, res) => {
     });
 });
 
-router.post('/addProjects', upload.single('img'), (req, res) => {
+router.post('/addProjects', upload.array('img'), (req, res) => {
   // const fs = require('fs');
   // const file = fs.readFileSync(req.file.path);
   // debugger;
@@ -80,7 +80,7 @@ router.post('/addProjects', upload.single('img'), (req, res) => {
   db.insertProject([
       req.body.title,
       req.body.description,
-      req.file.path,
+      req.files.map(f => f.path).join(','),
     ],
     function (err) {
       console.log('Error', err)
@@ -92,7 +92,10 @@ router.post('/addProjects', upload.single('img'), (req, res) => {
       //     res.status(200).send(projects);
       // });
     });
+});
 
+router.get('image/:image_id', (req, res) => {
+  return res.sendFile(fs.readFileSync('../uploads/' + req.image_id));
 });
 
 // router.post('/addProjects', (req, res) => {

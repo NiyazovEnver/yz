@@ -1,5 +1,6 @@
 import Glide from '@glidejs/glide';
 
+export function initGlide() {
   if (document.querySelector('.projects-slider')) {
     new Glide('.projects-slider', {
       type: 'slider',
@@ -18,7 +19,7 @@ import Glide from '@glidejs/glide';
           gap: 10
         },
         1366: {
-          gap: 10 
+          gap: 10
         },
         1024: {},
         768: {},
@@ -27,6 +28,7 @@ import Glide from '@glidejs/glide';
       }
     }).mount();
   }
+}
 
 
 

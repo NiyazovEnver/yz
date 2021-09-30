@@ -26,7 +26,7 @@
     </p>
 
     <div class="add-projects__attach-file">
-    <input class="visually-hidden" type="file" name="img" id="file" @change="onImageChange"/>
+    <input class="visually-hidden" type="file" name="img" id="file" @change="onImageChange" multiple/>
     <label class="add-projects__attach-file-label" for="file">Добавить изображение</label>
     </div>
     <div class="add-projects__attach-submit">

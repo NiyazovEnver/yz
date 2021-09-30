@@ -1,4 +1,3 @@
-
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '@/components/Login'
@@ -44,7 +43,7 @@ let router = new Router({
         layout: true
       }
     },
- 
+
     {
       path: '/',
       name: 'page-main',
@@ -57,15 +56,15 @@ let router = new Router({
       path: '/add-projects',
       name: 'add-projects',
       component: AddProjects,
-      meta: { 
+      meta: {
         requiresAuth: true
       }
     },
-    
+
     {
       path: '/projects',
       name: 'projects',
-      component: Projects,
+      component: AddProjects,
       meta: {
         layout: true
       }
@@ -113,57 +112,55 @@ let router = new Router({
 
 
 router.beforeEach((to, from, next) => {
-  if(to.matched.some(record => record.meta.requiresAuth)) {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
     if (store.getters.isLoggedIn) {
       next()
       return
     }
-    next('/login') 
+    next('/login')
   } else {
-    next() 
+    next()
   }
 })
 router.beforeEach((to, from, next) => {
-  if(to.matched.some(record => record.meta.requiresAuth)) {
-      if (localStorage.getItem('token') == null) {
-          next({
-              path: '/login',
-              params: { nextUrl: to.fullPath }
-          })
-      } else {
-          let user = JSON.parse(localStorage.getItem('user'))
-          if(to.matched.some(record => record.meta.is_admin)) {
-              if(user.is_admin == 1){
-                  next()
-              }
-              else{
-                  next({ name: 'userboard'})
-              }
-          }else {
-              next()
-          }
-      }
-  } else if(to.matched.some(record => record.meta.guest)) {
-      if(localStorage.getItem('jwt') == null){
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (localStorage.getItem('token') == null) {
+      next({
+        path: '/login',
+        params: {nextUrl: to.fullPath}
+      })
+    } else {
+      let user = JSON.parse(localStorage.getItem('user'))
+      if (to.matched.some(record => record.meta.is_admin)) {
+        if (user.is_admin == 1) {
           next()
+        } else {
+          next({name: 'userboard'})
+        }
+      } else {
+        next()
       }
-      else{
-          next({ name: 'userboard'})
-      }
-  }else {
+    }
+  } else if (to.matched.some(record => record.meta.guest)) {
+    if (localStorage.getItem('jwt') == null) {
       next()
+    } else {
+      next({name: 'userboard'})
+    }
+  } else {
+    next()
   }
 })
 
 router.beforeEach((to, from, next) => {
-    if(to.matched.some(record => record.meta.requiresAuth)) {
-      if (store.getters.isLoggedIn) {
-        next()
-        return
-      }
-      next('/login') 
-    } else {
-      next() 
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (store.getters.isLoggedIn) {
+      next()
+      return
     }
-  })
+    next('/login')
+  } else {
+    next()
+  }
+})
 export default router
