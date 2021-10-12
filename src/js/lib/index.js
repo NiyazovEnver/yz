@@ -4,6 +4,6 @@ import './mainSlider';
 // import './glideSlider';
 import './typed';
 import './refresh';
-// import './detailsSlider'
-// import './projectSlider'
+import './detailsSlider'
+import './projectSlider'
 import './capitalizeText'

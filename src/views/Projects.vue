@@ -109,9 +109,16 @@
           </ul>
         </div>
         <div class="glide__bullets" data-glide-el="controls[nav]">
+          <!-- <button v-for="project in projects"
+                  class="glide__bullet" 
+                  data-glide-dir="={project.id}"
+                  :key="project.id">
+            <span class="projects__item-number">{{project.id}}</span>
+            {{project.title}}
+          </button> -->
           <button class="glide__bullet" data-glide-dir="=0">
             <span class="projects__item-number">01</span>
-            tt-turk
+            Yuzum
           </button>
           <button class="glide__bullet" data-glide-dir="=1">
             <span class="projects__item-number">02</span>

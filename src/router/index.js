@@ -64,7 +64,7 @@ let router = new Router({
     {
       path: '/projects',
       name: 'projects',
-      component: AddProjects,
+      component: Projects,
       meta: {
         layout: true
       }

@@ -85,32 +85,32 @@
                 </div>
                 <div class="glide__track project-cards__track" data-glide-el="track">
                   <ul class="glide__slides">
-                    <li class="glide__slide"><a class="project-cards__item" href="./proj-gild.html"><img class="project-cards__item-img" src="../img/project-cards/card1.jpg" alt="" />
+                    <li class="glide__slide"><a class="project-cards__item" href="./proj-gild"><img class="project-cards__item-img" src="../img/project-cards/card1.jpg" alt="" />
                         <div class="project-cards__content">
                           <div class="project-cards__logo"><img src="../img/project-cards/gild.svg" /></div><span class="project-cards__description t-crop">Инструмент по подбору исполнителей</span><span class="project-cards__link">посмотреть </span>
                         </div>
                       </a></li>
-                    <li class="glide__slide"><a class="project-cards__item" href="./details.html"><img class="project-cards__item-img" src="../img/project-cards/card2.jpg" alt="" />
+                    <li class="glide__slide"><a class="project-cards__item" href="./details"><img class="project-cards__item-img" src="../img/project-cards/card2.jpg" alt="" />
                         <div class="project-cards__content">
                           <div class="project-cards__logo"><img src="../img/project-cards/tturk.svg" /></div><span class="project-cards__description t-crop">Торговая площадка, с товарами из Турции</span><span class="project-cards__link">посмотреть </span>
                         </div>
                       </a></li>
-                    <li class="glide__slide"><a class="project-cards__item" href="./proj-devlet.html"><img class="project-cards__item-img" src="../img/project-cards/card3.jpg" alt="" />
+                    <li class="glide__slide"><a class="project-cards__item" href="./proj-devlet"><img class="project-cards__item-img" src="../img/project-cards/card3.jpg" alt="" />
                         <div class="project-cards__content">
                           <div class="project-cards__logo"><img src="../img/project-cards/devlet.svg" /></div><span class="project-cards__description t-crop">Веб-сайт Девлет Сарай Музея</span><span class="project-cards__link">посмотреть </span>
                         </div>
                       </a></li>
-                    <li class="glide__slide"><a class="project-cards__item" href="./proj-doza.html"><img class="project-cards__item-img" src="../img/project-cards/card4.jpg" alt="" />
+                    <li class="glide__slide"><a class="project-cards__item" href="./proj-doza"><img class="project-cards__item-img" src="../img/project-cards/card4.jpg" alt="" />
                         <div class="project-cards__content">
                           <div class="project-cards__logo"><img src="../img/project-cards/doza.svg" /></div><span class="project-cards__description t-crop">Обучающее приложение для фармацевтов</span><span class="project-cards__link">посмотреть </span>
                         </div>
                       </a></li>
-                    <li class="glide__slide"><a class="project-cards__item" href="./proj-sc.html"><img class="project-cards__item-img" src="../img/project-cards/card5.jpg" alt="" />
+                    <li class="glide__slide"><a class="project-cards__item" href="./proj-sc"><img class="project-cards__item-img" src="../img/project-cards/card5.jpg" alt="" />
                         <div class="project-cards__content">
                           <div class="project-cards__logo"><img src="../img/project-cards/sportcity.svg" /></div><span class="project-cards__description t-crop">Интернет-магазин Sportcity</span><span class="project-cards__link">посмотреть </span>
                         </div>
                       </a></li>
-                    <li class="glide__slide"><a class="project-cards__item" href="./proj-library.html"><img class="project-cards__item-img" src="../img/project-cards/card6.jpg" alt="" />
+                    <li class="glide__slide"><a class="project-cards__item" href="./proj-library"><img class="project-cards__item-img" src="../img/project-cards/card6.jpg" alt="" />
                         <div class="project-cards__content">
                           <div class="project-cards__logo"><img src="../img/project-cards/library.svg" /></div><span class="project-cards__description t-crop">Девлет Сарай онлайн-библиотека </span><span class="project-cards__link">посмотреть </span>
                         </div>
@@ -126,11 +126,11 @@
  
 export default{
     name: 'details',
-    mounted(){
-      let recaptchaScript = document.createElement('script')
-      recaptchaScript.setAttribute('src', '../js/lib/detailsSlider.js')
-      document.head.appendChild(recaptchaScript)
-    }
+    // mounted(){
+    //   let recaptchaScript = document.createElement('script')
+    //   recaptchaScript.setAttribute('src', '../js/lib/detailsSlider.js')
+    //   document.head.appendChild(recaptchaScript)
+    // }
 }
 
 </script>
